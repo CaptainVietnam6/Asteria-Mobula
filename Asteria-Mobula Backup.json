@@ -1,6 +1,6 @@
 {
 	"generatedBy": "10.7.0",
-	"apiVersion": "1.41.0",
+	"apiVersion": "1.43.0",
 	"profiles": [
 		{
 			"PID": {
@@ -56,8 +56,9 @@
 				"roll_rate_limit": 1998,
 				"pitch_rate_limit": 1998,
 				"yaw_rate_limit": 1998,
-				"throttleLimitType": null,
-				"throttleLimitPercent": null
+				"throttleLimitType": 0,
+				"throttleLimitPercent": 100,
+				"rates_type": 0
 			},
 			"AccTrim": [
 				-4,
@@ -607,18 +608,18 @@
 			},
 			"PIDs": [
 				[
+					42,
+					85,
+					35
+				],
+				[
 					46,
-					45,
-					25
-				],
-				[
-					50,
-					50,
-					27
+					90,
+					38
 				],
 				[
 					45,
-					100,
+					90,
 					0
 				],
 				[
@@ -655,8 +656,9 @@
 				"roll_rate_limit": 1998,
 				"pitch_rate_limit": 1998,
 				"yaw_rate_limit": 1998,
-				"throttleLimitType": null,
-				"throttleLimitPercent": null
+				"throttleLimitType": 0,
+				"throttleLimitPercent": 100,
+				"rates_type": 0
 			},
 			"AccTrim": [
 				-4,
@@ -1206,18 +1208,18 @@
 			},
 			"PIDs": [
 				[
+					42,
+					85,
+					35
+				],
+				[
 					46,
-					45,
-					25
-				],
-				[
-					50,
-					50,
-					27
+					90,
+					38
 				],
 				[
 					45,
-					100,
+					90,
 					0
 				],
 				[
@@ -1254,8 +1256,9 @@
 				"roll_rate_limit": 1998,
 				"pitch_rate_limit": 1998,
 				"yaw_rate_limit": 1998,
-				"throttleLimitType": null,
-				"throttleLimitPercent": null
+				"throttleLimitType": 0,
+				"throttleLimitPercent": 100,
+				"rates_type": 0
 			},
 			"AccTrim": [
 				-4,
@@ -2265,8 +2268,8 @@
 	},
 	"SENSOR_CONFIG": {
 		"acc_hardware": 0,
-		"baro_hardware": 1,
-		"mag_hardware": 1
+		"baro_hardware": 0,
+		"mag_hardware": 0
 	},
 	"PID_ADVANCED_CONFIG": {
 		"gyro_sync_denom": 1,
@@ -2278,12 +2281,12 @@
 		"gyroUse32kHz": 0,
 		"motorPwmInversion": 0,
 		"gyroHighFsr": 0,
-		"gyroMovementCalibThreshold": 0,
-		"gyroCalibDuration": 0,
+		"gyroMovementCalibThreshold": 48,
+		"gyroCalibDuration": 125,
 		"gyroOffsetYaw": 0,
-		"gyroCheckOverflow": 0,
+		"gyroCheckOverflow": 2,
 		"debugMode": 0,
-		"debugModeCount": 0
+		"debugModeCount": 63
 	},
 	"LED_MODE_COLORS": [
 		{
@@ -2541,13 +2544,13 @@
 		"neutral": 1460
 	},
 	"SENSOR_ALIGNMENT": {
-		"align_gyro": 0,
-		"align_acc": 0,
+		"align_gyro": 2,
+		"align_acc": 2,
 		"align_mag": 0,
-		"gyro_detection_flags": null,
-		"gyro_to_use": null,
-		"gyro_1_align": null,
-		"gyro_2_align": null
+		"gyro_detection_flags": 1,
+		"gyro_to_use": 0,
+		"gyro_1_align": 2,
+		"gyro_2_align": 0
 	},
 	"RX_CONFIG": {
 		"serialrx_provider": 0,
@@ -2570,7 +2573,7 @@
 		"rcSmoothingDerivativeCutoff": 0,
 		"rcSmoothingInputType": 1,
 		"rcSmoothingDerivativeType": 2,
-		"rcSmoothingAutoSmoothness": 0,
+		"rcSmoothingAutoSmoothness": 10,
 		"usbCdcHidType": 0
 	},
 	"FAILSAFE_CONFIG": {
@@ -2789,8 +2792,8 @@
 		"minthrottle": 1070,
 		"maxthrottle": 2000,
 		"mincommand": 1000,
-		"motor_count": 0,
-		"motor_poles": 0,
+		"motor_count": 4,
+		"motor_poles": 14,
 		"use_dshot_telemetry": false,
 		"use_esc_sensor": false
 	},
@@ -2940,5 +2943,106 @@
 			"_beeperMask": 514
 		}
 	},
-	"MODE_RANGES_EXTRA": []
+	"MODE_RANGES_EXTRA": [
+		{
+			"id": 0,
+			"modeLogic": 0,
+			"linkedTo": 0
+		},
+		{
+			"id": 1,
+			"modeLogic": 0,
+			"linkedTo": 0
+		},
+		{
+			"id": 2,
+			"modeLogic": 0,
+			"linkedTo": 0
+		},
+		{
+			"id": 13,
+			"modeLogic": 0,
+			"linkedTo": 0
+		},
+		{
+			"id": 35,
+			"modeLogic": 0,
+			"linkedTo": 0
+		},
+		{
+			"id": 0,
+			"modeLogic": 0,
+			"linkedTo": 0
+		},
+		{
+			"id": 0,
+			"modeLogic": 0,
+			"linkedTo": 0
+		},
+		{
+			"id": 0,
+			"modeLogic": 0,
+			"linkedTo": 0
+		},
+		{
+			"id": 0,
+			"modeLogic": 0,
+			"linkedTo": 0
+		},
+		{
+			"id": 0,
+			"modeLogic": 0,
+			"linkedTo": 0
+		},
+		{
+			"id": 0,
+			"modeLogic": 0,
+			"linkedTo": 0
+		},
+		{
+			"id": 0,
+			"modeLogic": 0,
+			"linkedTo": 0
+		},
+		{
+			"id": 0,
+			"modeLogic": 0,
+			"linkedTo": 0
+		},
+		{
+			"id": 0,
+			"modeLogic": 0,
+			"linkedTo": 0
+		},
+		{
+			"id": 0,
+			"modeLogic": 0,
+			"linkedTo": 0
+		},
+		{
+			"id": 0,
+			"modeLogic": 0,
+			"linkedTo": 0
+		},
+		{
+			"id": 0,
+			"modeLogic": 0,
+			"linkedTo": 0
+		},
+		{
+			"id": 0,
+			"modeLogic": 0,
+			"linkedTo": 0
+		},
+		{
+			"id": 0,
+			"modeLogic": 0,
+			"linkedTo": 0
+		},
+		{
+			"id": 0,
+			"modeLogic": 0,
+			"linkedTo": 0
+		}
+	]
 }
