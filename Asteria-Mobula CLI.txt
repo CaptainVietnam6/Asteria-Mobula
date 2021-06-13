@@ -17,7 +17,7 @@ manufacturer_id HAMO
 mcu_id 001a00403437510e33353431
 signature 
 
-# name: Mobula
+# name: Asteria-Mobula
 
 # resources
 resource RX_BIND 1 B02
@@ -48,9 +48,10 @@ mode_color 5 5 3
 # aux
 aux 0 0 0 1850 2100 0 0
 aux 1 1 5 900 1125 0 0
-aux 2 2 5 1300 1700 0 0
-aux 3 13 4 1300 2100 0 0
-aux 4 35 4 1775 2100 0 0
+aux 2 1 3 1300 2100 0 0
+aux 3 2 5 1300 1700 0 0
+aux 4 13 4 1300 2100 0 0
+aux 5 35 4 1775 2100 0 0
 
 # master
 set gyro_lowpass_hz = 100
@@ -58,6 +59,8 @@ set gyro_lowpass2_hz = 300
 set yaw_spin_recovery = ON
 set acc_trim_pitch = -4
 set acc_calibration = -149,57,98,1
+set mag_hardware = NONE
+set baro_hardware = NONE
 set rc_smoothing_derivative_type = BIQUAD
 set fpv_mix_degrees = 25
 set airmode_start_throttle_percent = 32
@@ -75,16 +78,18 @@ set osd_warn_fail_safe = OFF
 set osd_cap_alarm = 450
 set osd_vbat_pos = 2337
 set osd_rssi_pos = 2106
+set osd_link_quality_pos = 2138
 set osd_remaining_time_estimate_pos = 361
 set osd_flymode_pos = 2081
 set osd_g_force_pos = 2345
-set osd_throttle_pos = 2145
+set osd_throttle_pos = 2113
 set osd_crosshairs_pos = 2253
 set osd_ah_sbar_pos = 2254
 set osd_ah_pos = 2126
 set osd_current_pos = 2369
 set osd_mah_drawn_pos = 2433
-set osd_craft_name_pos = 2092
+set osd_motor_diag_pos = 2145
+set osd_craft_name_pos = 2088
 set osd_home_dir_pos = 2158
 set osd_compass_bar_pos = 2122
 set osd_power_pos = 2401
@@ -93,7 +98,7 @@ set osd_pit_ang_pos = 2262
 set osd_rol_ang_pos = 2294
 set osd_battery_usage_pos = 2440
 set osd_nheading_pos = 2153
-set osd_esc_rpm_pos = 2113
+set osd_esc_rpm_pos = 65
 set osd_stat_tim_2 = OFF
 set osd_stat_max_dist = ON
 set osd_stat_battery = ON
@@ -107,7 +112,7 @@ set frsky_x_rx_num = 11
 set gyro_1_align_yaw = 900
 set gyro_2_spibus = 1
 set gyro_2_sensor_align = DEFAULT
-set name = Mobula
+set name = Asteria-Mobula
 
 profile 0
 
@@ -135,7 +140,7 @@ profile 1
 profile 2
 
 # restore original profile selection
-profile 0
+profile 1
 
 rateprofile 0
 
@@ -174,7 +179,7 @@ rateprofile 4
 rateprofile 5
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 1
 
 # save configuration
 save
