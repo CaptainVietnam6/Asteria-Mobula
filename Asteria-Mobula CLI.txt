@@ -55,9 +55,9 @@ aux 5 35 4 1775 2100 0 0
 
 # master
 set gyro_lowpass_hz = 100
-set gyro_lowpass2_hz = 300
 set yaw_spin_recovery = ON
-set acc_trim_pitch = -4
+set dyn_notch_width_percent = 20
+set dyn_notch_q = 250
 set acc_calibration = -149,57,98,1
 set mag_hardware = NONE
 set baro_hardware = NONE
@@ -66,12 +66,15 @@ set fpv_mix_degrees = 25
 set airmode_start_throttle_percent = 32
 set dshot_idle_value = 1000
 set dshot_burst = OFF
+set motor_poles = 12
 set bat_capacity = 450
+set vbat_max_cell_voltage = 440
 set vbat_detect_cell_voltage = 30
+set vbat_scale = 112
+set ibata_offset = -3000
 set small_angle = 180
 set gps_sbas_mode = AUTO
 set gps_rescue_throttle_min = 1200
-set pid_process_denom = 4
 set runaway_takeoff_deactivate_throttle_percent = 25
 set osd_warn_core_temp = OFF
 set osd_warn_fail_safe = OFF
@@ -105,6 +108,7 @@ set osd_stat_battery = ON
 set osd_stat_bbox = OFF
 set osd_stat_bb_no = OFF
 set cpu_overclock = OFF
+set scheduler_optimize_rate = ON
 set frsky_spi_tx_id = 83,46
 set frsky_spi_offset = -41
 set frsky_spi_bind_hop_data = 6,194,149,104,59,14,204,159,114,69,24,214,169,124,79,34,224,179,136,89,44,234,189,144,99,54,9,199,154,109,64,19,209,164,119,74,29,219,174,129,84,39,229,184,139,94,49,0,0,0
@@ -118,7 +122,6 @@ profile 0
 
 # profile 0
 set dterm_lowpass_hz = 100
-set dterm_lowpass2_hz = 200
 set anti_gravity_gain = 5000
 set iterm_rotation = ON
 set iterm_relax_cutoff = 11
